@@ -1,0 +1,49 @@
+cff-version: 1.2.0
+title: >-
+  Anomaly Detection in Large-Scale Cloud Systems: An
+  Industry Case and Dataset
+doi: 10.48550/arXiv.2411.09047
+authors:
+  - family-names: Islam
+    given-names: Mohammad Saiful
+  - family-names: Rakha
+    given-names: Mohamed Sami
+  - family-names: Pourmajidi
+    given-names: William
+  - family-names: Sivaloganathan
+    given-names: Janakan
+  - family-names: Steinbacher
+    given-names: John
+  - family-names: Miranskyy
+    given-names: Andriy
+year: 2024
+journal: arXiv preprint arXiv:2411.09047
+url: https://arxiv.org/abs/2411.09047
+abstract: >-
+  As Large-Scale Cloud Systems (LCS) become increasingly
+  complex, effective anomaly detection is critical for
+  ensuring system reliability and performance. However,
+  there is a shortage of large-scale, real-world datasets
+  available for benchmarking anomaly detection methods.
+
+  To address this gap, we introduce a new high-dimensional
+  dataset from IBM Cloud, collected over 4.5 months from the
+  IBM Cloud Console. This dataset comprises 39,365 rows and
+  117,448 columns of telemetry data. Additionally, we
+  demonstrate the application of machine learning models for
+  anomaly detection and discuss the key challenges faced in
+  this process.
+
+  This study and the accompanying dataset provide a resource
+  for researchers and practitioners in cloud system
+  monitoring. It facilitates more efficient testing of
+  anomaly detection methods in real-world data, helping to
+  advance the development of robust solutions to maintain
+  the health and performance of large-scale cloud
+  infrastructures.
+keywords:
+  - ibm-cloud-console
+  - anomaly-detection
+  - software-engineering
+  - cloud-computing
+  - deep-learning

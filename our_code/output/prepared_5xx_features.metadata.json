@@ -1,0 +1,13 @@
+{
+  "raw_data": "C:\\Downloads\\icse2025\\data\\massaged\\pivoted_data_all.parquet",
+  "prepared_data": "C:\\Downloads\\icse2025\\our_code\\output\\prepared_5xx_features.parquet",
+  "raw_column_count": 117449,
+  "selected_5xx_feature_count": 2406,
+  "added_time_feature_count": 4,
+  "final_feature_count": 2410,
+  "row_count": 39365,
+  "missing_values_replaced": 93826251,
+  "train_row_count": 9787,
+  "test_row_count": 26488,
+  "test_anomaly_window_count": 19
+}

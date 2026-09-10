@@ -1,0 +1,44 @@
+paths:
+  raw_data: data/massaged/pivoted_data_all.parquet
+  labels: data/labels/anomaly_windows.csv
+  prepared_data: our_code/output/prepared_5xx_features.parquet
+  results_dir: results/model_experiments
+  output_dir: our_code/output
+
+preprocessing:
+  feature_pattern: "_5\\d\\d_.*count"
+  timestamp_column: interval_start
+
+experiment:
+  start_date: "2024-01-26"
+  train_end_date: "2024-02-29"
+  test_start_date: "2024-03-01"
+  end_date: "2024-05-31"
+  anomaly_minutes_before: 20
+  nab_profile: reward_fn
+
+parameter_grid:
+  thresholds: [0.9990, 0.9995, 0.9996, 0.9997, 0.9998]
+  long_windows: [20, 25, 30, 35, 40, 50]
+  short_windows: [1, 2, 3, 4, 5]
+
+selection:
+  minimum_true_positive_windows: 6
+
+reported_results:
+  ANN:
+    threshold: 0.9996
+    long_window: 30
+    short_window: 2
+    true_positive_windows: 6
+    false_positive_alerts: 76
+    false_negative_windows: 13
+    normalized_nab_score: 13.600429909253538
+  GRU:
+    threshold: 0.9996
+    long_window: 30
+    short_window: 2
+    true_positive_windows: 6
+    false_positive_alerts: 71
+    false_negative_windows: 13
+    normalized_nab_score: 14.56534218995529

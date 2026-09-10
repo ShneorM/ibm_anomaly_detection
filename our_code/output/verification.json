@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "models": {
+    "ANN": {
+      "passed": true,
+      "checks": {
+        "true_positive_windows": true,
+        "false_positive_alerts": true,
+        "false_negative_windows": true,
+        "normalized_nab_score": true
+      },
+      "actual": {
+        "threshold": 0.9996,
+        "long_window": 30,
+        "short_window": 2,
+        "precision": 0.09523809523809523,
+        "recall": 0.008273009307135471,
+        "f1_score": 0.015223596574690773,
+        "accuracy": 0.960925702204772,
+        "mcc": 0.017662787595916603,
+        "true_positive_windows": 6,
+        "false_positive_alerts": 76,
+        "false_negative_windows": 13,
+        "raw_nab_score": -30.247754951725483,
+        "normalized_nab_score": 13.600429909253538
+      }
+    },
+    "GRU": {
+      "passed": true,
+      "checks": {
+        "true_positive_windows": true,
+        "false_positive_alerts": true,
+        "false_negative_windows": true,
+        "normalized_nab_score": true
+      },
+      "actual": {
+        "threshold": 0.9996,
+        "long_window": 30,
+        "short_window": 2,
+        "precision": 0.10126582278481013,
+        "recall": 0.008273009307135471,
+        "f1_score": 0.015296367112810709,
+        "accuracy": 0.9611144669284204,
+        "mcc": 0.018885259005580926,
+        "true_positive_windows": 6,
+        "false_positive_alerts": 71,
+        "false_negative_windows": 13,
+        "raw_nab_score": -29.697754951725486,
+        "normalized_nab_score": 14.56534218995529
+      }
+    }
+  }
+}

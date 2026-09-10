@@ -1,0 +1,69 @@
+defaults:
+  - override hydra/hydra_logging: none #colorlog
+  - override hydra/job_logging: none # colorlog
+
+hydra:
+  job:
+    chdir: true  # to save objects in a working directory
+  run:
+    dir: .  # Disable Hydra's Directory Change
+
+
+modeling:
+  random_seed: 42
+
+
+evaluation: # Default parameters
+  encoding_dim: 14
+  epochs: 50
+  batch_size: 64 # 16  # training batch size
+  evaluation_batch_size: 64
+  train_buffer_size: 2000
+  learning_rate: 0.01
+  dropout_rate: 0.3
+  layer_cnt: 7
+  cell_cnt : 16 #16
+  patience: 10
+  anomaly_threshold_min_value: 0.5
+  anomaly_threshold_max_value: 1.0
+  anomaly_long_window_length: 400
+  anomaly_short_window_length: 10
+  loss_function: "mae"
+  nab_scoring_profile: "reward_fn" # Options: "standard", "reward_fn"
+
+logging:
+  log_file: anomaly_detection.log
+  max_log_size: 1000000  # 1 MB
+  backup_count: 5
+
+
+
+data_preparation_pipeline:
+  features_5xx_prep:
+    input_file:
+      path: "./data/massaged/"
+      filename: "pivoted_data_all.parquet"
+    output_file:
+      path: "./data/5xx_feature_dir/"
+      filename_template: "filtered_df_{data_center_name}.csv"
+    regex_pattern: "_5\\d\\d_.*count"
+
+
+
+train_test_config:
+  use_model: ANN # Options: ANN, GRU
+  input_files:
+    observations_file_name: "./data/5xx_feature_dir/filtered_df_all.csv"  #filtered_df_datacenter5.csv
+    ground_truth_labels_file_name: "./data/labels/anomaly_windows.csv"
+    observations_ts_column_name: interval_start
+  result_file:
+      path: "./results/model_experiments/"  # For AE Model
+  model_save_path: "./trained_models/" # Path to save trained models
+  anomaly_window:
+    minutes_before: 20
+    minutes_after: 0  # Use Duration column values
+  experiment_parameters:
+    start_date: '2024-01-26' # Actual Satrt 26 Jan 2024
+    train_end_date: '2024-02-29'
+    test_start_date: '2024-03-01'
+    end_date: '2024-05-31' # Actual End 31 May 2024

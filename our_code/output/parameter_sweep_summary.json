@@ -1,0 +1,73 @@
+{
+  "selection_rule": "highest NAB score with at least 6 detected windows",
+  "models": {
+    "ANN": {
+      "highest_nab_without_detection_constraint": {
+        "threshold": 0.9998,
+        "long_window": 30,
+        "short_window": 2,
+        "precision": 0.14,
+        "recall": 0.007238883143743537,
+        "f1_score": 0.013765978367748278,
+        "accuracy": 0.9621337964361221,
+        "mcc": 0.023997630211367017,
+        "true_positive_windows": 5,
+        "false_positive_alerts": 43,
+        "false_negative_windows": 14,
+        "raw_nab_score": -29.6210713333424,
+        "normalized_nab_score": 14.699874853785264,
+        "model": "ANN"
+      },
+      "selected_low_fn_configuration": {
+        "threshold": 0.9996,
+        "long_window": 30,
+        "short_window": 2,
+        "precision": 0.09523809523809523,
+        "recall": 0.008273009307135471,
+        "f1_score": 0.015223596574690773,
+        "accuracy": 0.960925702204772,
+        "mcc": 0.017662787595916603,
+        "true_positive_windows": 6,
+        "false_positive_alerts": 76,
+        "false_negative_windows": 13,
+        "raw_nab_score": -30.247754951725483,
+        "normalized_nab_score": 13.600429909253538,
+        "model": "ANN"
+      }
+    },
+    "GRU": {
+      "highest_nab_without_detection_constraint": {
+        "threshold": 0.9995,
+        "long_window": 25,
+        "short_window": 2,
+        "precision": 0.15217391304347827,
+        "recall": 0.007238883143743537,
+        "f1_score": 0.013820335636722606,
+        "accuracy": 0.9622848082150408,
+        "mcc": 0.025723356176188567,
+        "true_positive_windows": 5,
+        "false_positive_alerts": 39,
+        "false_negative_windows": 14,
+        "raw_nab_score": -29.18292937126945,
+        "normalized_nab_score": 15.46854496268518,
+        "model": "GRU"
+      },
+      "selected_low_fn_configuration": {
+        "threshold": 0.9996,
+        "long_window": 30,
+        "short_window": 2,
+        "precision": 0.10126582278481013,
+        "recall": 0.008273009307135471,
+        "f1_score": 0.015296367112810709,
+        "accuracy": 0.9611144669284204,
+        "mcc": 0.018885259005580926,
+        "true_positive_windows": 6,
+        "false_positive_alerts": 71,
+        "false_negative_windows": 13,
+        "raw_nab_score": -29.697754951725486,
+        "normalized_nab_score": 14.56534218995529,
+        "model": "GRU"
+      }
+    }
+  }
+}
