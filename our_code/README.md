@@ -59,7 +59,3 @@ The verification checks these reported results:
 - GRU: 6 detected anomaly windows, 71 false alerts, and normalized NAB score 14.5653.
 
 The detailed verification is saved as `our_code/output/verification.json`.
-
-## Note
-
-This folder was added for the updated submission. It documents our data preparation, parameter search, and result verification while keeping the original research code unchanged.
