@@ -258,4 +258,3 @@ If you use or study the code, please cite it as follows.
 
 If you encounter any issues, please feel free to reach out for support by opening an issue.
 
-"# ibm_anomaly_detection" 
